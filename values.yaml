@@ -1,0 +1,25 @@
+
+s3:
+  enabled: false
+  bucket: bazel-cache
+  endpoint: s3.amazonaws.com
+  authMethod: iam_role
+
+pvc:
+  storageClass: aws-efs
+  size: 20Gi
+
+image:
+  repository: quay.io/bazel-remote/bazel-remote
+  tag: latest
+  pullPolicy: IfNotPresent
+ 
+# The image of the troubleshooting sidecar if needed
+sidecar:
+  enabled: false
+  repository: quay.io/dnessill/network-multitool
+  tag: latest
+  name: multitool
+  pullPolicy: IfNotPresent
+
+dnsSuffix: bz.io

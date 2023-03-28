@@ -1,0 +1,16 @@
+annotations:
+  category: Infrastructure
+apiVersion: v2
+appVersion: 1.0.0
+description: Helm chart for bazel-remote service.  Default values used to 
+  deploy to an AWS EKS cluster using a LetsEncrypt/cert-manager combo for SSL certs.  
+home: https://github.com/Boeing/bazel-remote-helm-chart
+keywords:
+- bazel 
+- http
+- cache
+name: bazel-cache 
+sources:
+- https://github.com/buchgr/bazel-remote 
+- https://github.com/Boeing/bazel-remote-helm-chart
+version: 1.0.0
